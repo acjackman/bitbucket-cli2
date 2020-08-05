@@ -1,0 +1,10 @@
+{
+  "_template": "gh:cjolowicz/cookiecutter-hypermodern-python",
+  "author": "Adam Jackman",
+  "email": "adam@acjackman.com",
+  "friendly_name": "BitBucket CLI",
+  "github_user": "acjackman",
+  "package_name": "bb",
+  "project_name": "bitbucket-cli2",
+  "version": "0.0.0"
+}
