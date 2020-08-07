@@ -60,7 +60,7 @@ or the command-line interface:
 .. code:: console
 
    $ poetry run python
-   $ poetry run bitbucket-cli2
+   $ poetry run bb
 
 .. _Poetry: https://python-poetry.org/
 .. _Nox: https://nox.thea.codes/

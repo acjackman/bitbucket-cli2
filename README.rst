@@ -1,7 +1,7 @@
 BitBucket CLI
 =============
 
-|PyPI| |Python Version| |License|
+|Python Version| |License|
 
 |Read the Docs| |Tests| |Codecov|
 
@@ -48,11 +48,11 @@ Requirements
 Installation
 ------------
 
-You can install *BitBucket CLI* via pip_ from PyPI_:
+I recommend installing  *BitBucket CLI* via pip_ from PyPI_:
 
 .. code:: console
 
-   $ pip install bitbucket-cli2
+   $ pipx install bitbucket-cli2
 
 
 Usage

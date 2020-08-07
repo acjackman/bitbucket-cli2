@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bitbucket-cli2"
-version = "0.0.0"
+version = "0.0.1"
 description = "BitBucket CLI"
 authors = ["Adam Jackman <adam@acjackman.com>"]
 license = "MIT"
@@ -46,7 +46,7 @@ reorder-python-imports = "^2.3.1"
 pre-commit-hooks = "^3.1.0"
 
 [tool.poetry.scripts]
-bitbucket-cli2 = "bb.__main__:main"
+bb = "bitbucket_cli2.__main__:cli"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
