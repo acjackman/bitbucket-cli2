@@ -1,11 +1,14 @@
 import logging
 import time
-from typing import Iterable, Optional, Dict, Any
+from typing import Any
+from typing import Dict
+from typing import Iterable
+from typing import Optional
 
 import requests
-from requests import Response
 from boltons.iterutils import get_path
 from boltons.iterutils import PathAccessError
+from requests import Response
 
 
 log = logging.getLogger(__name__)

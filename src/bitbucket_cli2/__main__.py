@@ -10,13 +10,15 @@ import json
 import logging
 import subprocess
 import sys  # noqa: S404
-from typing import Optional, Dict, Any
+from typing import Any
+from typing import Dict
+from typing import Optional
 
 import click
 
-
+from .bitbucket import BitBucketClient
+from .bitbucket import Pipeline
 from .profilekeys import ProfileKeys
-from .bitbucket import BitBucketClient, Pipeline
 
 log = logging.getLogger(__name__)
 
