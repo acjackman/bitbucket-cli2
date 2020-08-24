@@ -11,8 +11,8 @@ def runner() -> CliRunner:
     return CliRunner()
 
 
-def test_main_succeeds(runner: CliRunner) -> None:
+def test_help_menu(runner: CliRunner) -> None:
     """It exits with a status code of zero."""
-    result = runner.invoke(__main__.cli)
+    result = runner.invoke(__main__.cli, "--help")
     print(result.output)
     assert result.exit_code == 0

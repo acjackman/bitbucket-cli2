@@ -12,8 +12,9 @@ import nox
 from nox.sessions import Session
 
 
-package = "bb"
+package = "bitbucket_cli2"
 python_versions = ["3.8", "3.7", "3.6"]
+primary_python = python_versions[0]
 nox.options.sessions = "pre-commit", "safety", "mypy", "tests", "typeguard"
 
 
@@ -162,7 +163,7 @@ def activate_virtualenv_in_precommit_hooks(session: Session) -> None:
         hook.write_text("\n".join(lines))
 
 
-@nox.session(name="pre-commit", python="3.8")
+@nox.session(name="pre-commit", python=primary_python)
 def precommit(session: Session) -> None:
     """Lint using pre-commit."""
     args = session.posargs or ["run", "--all-files", "--show-diff-on-failure"]
@@ -185,7 +186,7 @@ def precommit(session: Session) -> None:
         activate_virtualenv_in_precommit_hooks(session)
 
 
-@nox.session(python="3.8")
+@nox.session(python=primary_python)
 def safety(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     poetry = Poetry(session)
@@ -248,7 +249,7 @@ def xdoctest(session: Session) -> None:
     session.run("python", "-m", "xdoctest", package, *args)
 
 
-@nox.session(python="3.8")
+@nox.session(python=primary_python)
 def docs(session: Session) -> None:
     """Build the documentation."""
     args = session.posargs or ["docs", "docs/_build"]

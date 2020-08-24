@@ -27,6 +27,12 @@ repos:
         language: system
         types: [text]
         stages: [commit, push, manual]
+      - id: mixed-line-ending
+        name: Fix Line Endings
+        entry: mixed-line-ending
+        args: [--fix=lf]
+        language: system
+        stages: [commit, push, manual]
       - id: flake8
         name: flake8
         entry: flake8

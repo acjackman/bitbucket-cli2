@@ -1,11 +1,3 @@
-"""bb --- BitBucket CLI tool.
-
-Useful for working with BitBucket and BitBucket pipelines.
-
-Set BB_WORKSPACE and BB_REPO with [direnv](https://direnv.net).
-
-Set BB_USER and BB_PASSWORD using environment variables or keychain.
-"""
 import json
 import logging
 import subprocess
