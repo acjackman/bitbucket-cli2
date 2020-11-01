@@ -61,7 +61,11 @@ class BitBucketClient:
         n = initial_page_length or page_length
         while True:
             data = self._get(
-                "/pipelines/", params={"pagelen": n, "sort": "-created_on",}
+                "/pipelines/",
+                params={
+                    "pagelen": n,
+                    "sort": "-created_on",
+                },
             ).json()
             yield from (Pipeline(v) for v in data["values"])
             # Continue fetching pages at the regular length
@@ -87,9 +91,18 @@ class BitBucketClient:
                 "type": "pipeline_ref_target",
                 "ref_type": "branch",
                 "ref_name": branch_name,
-                "selector": {"type": "custom", "pattern": pipeline_name,},
+                "selector": {
+                    "type": "custom",
+                    "pattern": pipeline_name,
+                },
             },
-            "variables": [{"key": str(k), "value": str(v),} for k, v in extras.items()],
+            "variables": [
+                {
+                    "key": str(k),
+                    "value": str(v),
+                }
+                for k, v in extras.items()
+            ],
         }
         return Pipeline(self._post("/pipelines/", json=payload).json())
 
