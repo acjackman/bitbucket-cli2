@@ -19,7 +19,7 @@ Changelog = "https://github.com/acjackman/bitbucket-cli2/releases"
 python = "^3.6.1"
 click = "^7.0"
 boltons = "^20.2.0"
-requests = "^2.24.0"
+requests = "^2.25.0"
 keyring = "^21.4.0"
 
 [tool.poetry.dev-dependencies]
